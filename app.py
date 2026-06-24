@@ -60,7 +60,14 @@ if st.button("Prediksi"):
     st.subheader("Hasil Prediksi")
     st.write("Nilai Prediksi:", hasil)
 
-    if hasil >= 3:
-        st.success("✅ Air Aman Digunakan")
-    else:
-        st.error("⚠️ Air Tidak Aman Digunakan")
+   if hasil == 5:
+    st.success("Sangat Baik")
+
+elif hasil == 4:
+    st.success("Baik")
+
+elif hasil == 3:
+    st.warning("Cukup")
+
+else:
+    st.error("Tidak Layak Digunakan")

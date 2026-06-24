@@ -10,7 +10,7 @@ st.set_page_config(
     page_icon="💧"
 )
 
-st.title("Prediksi Kualitas Air")
+st.title("💧 Prediksi Kualitas Air")
 
 st.write("Masukkan parameter kualitas air untuk mengetahui apakah air aman digunakan.")
 
@@ -50,6 +50,6 @@ if st.button("Prediksi"):
     st.subheader("Hasil Prediksi")
 
     if hasil >= 4:
-        st.success("Air Aman Digunakan")
+        st.success("✅ Air Aman Digunakan")
     else:
-        st.error("Air Tidak Aman Digunakan") 
+        st.error("⚠️ Air Tidak Aman Digunakan")

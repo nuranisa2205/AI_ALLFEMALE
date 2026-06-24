@@ -67,7 +67,7 @@ if st.button("Prediksi"):
         st.success("✅ Baik")
 
     elif hasil == 3:
-        st.warning("⚠️ Cukup")
+        st.warning("⚠️ Cukup Baik")
 
     else:
         st.error("❌ Tidak Layak Digunakan")

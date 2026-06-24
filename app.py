@@ -60,11 +60,6 @@ if st.button("Prediksi"):
     st.subheader("Hasil Prediksi")
     st.write("Nilai Prediksi:", hasil)
 
-       hasil = model.predict(data)[0]
-
-    st.subheader("Hasil Prediksi")
-    st.write("Nilai Prediksi:", hasil)
-
     if hasil == 5:
         st.success("✅ Sangat Baik")
 

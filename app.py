@@ -60,14 +60,19 @@ if st.button("Prediksi"):
     st.subheader("Hasil Prediksi")
     st.write("Nilai Prediksi:", hasil)
 
-   if hasil == 5:
-    st.success("Sangat Baik")
+       hasil = model.predict(data)[0]
 
-elif hasil == 4:
-    st.success("Baik")
+    st.subheader("Hasil Prediksi")
+    st.write("Nilai Prediksi:", hasil)
 
-elif hasil == 3:
-    st.warning("Cukup")
+    if hasil == 5:
+        st.success("✅ Sangat Baik")
 
-else:
-    st.error("Tidak Layak Digunakan")
+    elif hasil == 4:
+        st.success("✅ Baik")
+
+    elif hasil == 3:
+        st.warning("⚠️ Cukup")
+
+    else:
+        st.error("❌ Tidak Layak Digunakan")

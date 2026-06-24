@@ -35,7 +35,7 @@ if st.button("Prediksi"):
         do,
         curah_hujan
     ]], columns=[
-        "Temperatur",
+        "Temperatur ",
         "TDS",
         "TSS",
         "pH",

@@ -34,7 +34,7 @@ do = st.number_input("DO", value=4.0)
 curah_hujan = st.number_input("Curah Hujan", value=5.0)
 
 if st.button("Prediksi"):
-    
+
     data = pd.DataFrame([[
         temperatur,
         tds,
@@ -57,10 +57,10 @@ if st.button("Prediksi"):
 
     hasil = model.predict(data)[0]
 
-st.subheader("Hasil Prediksi")
-st.write("Nilai Prediksi:", hasil)
+    st.subheader("Hasil Prediksi")
+    st.write("Nilai Prediksi:", hasil)
 
-if hasil >= 4:
-    st.success("✅ Air Aman Digunakan")
-else:
-    st.error("⚠️ Air Tidak Aman Digunakan")
+    if hasil >= 4:
+        st.success("✅ Air Aman Digunakan")
+    else:
+        st.error("⚠️ Air Tidak Aman Digunakan")

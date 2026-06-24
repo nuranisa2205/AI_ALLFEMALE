@@ -10,7 +10,17 @@ st.set_page_config(
     page_icon="💧"
 )
 
-st.title("💧 Prediksi Kualitas Air")
+st.title("💧 Sistem Prediksi Kualitas Air")
+st.subheader("Berbasis Machine Learning Random Forest")
+st.markdown("### Kelompok")
+st.write("Adolfince Dormina Yapen")
+st.write("Nur Anisa Jamil")
+st.write("Raysha Imania Siswandi")
+st.write("Siti Septiani")
+st.write("Widya Ohibor")
+st.info(
+    "Website ini digunakan untuk memprediksi kualitas air berdasarkan parameter lingkungan menggunakan algoritma Random Forest."
+)
 
 st.write("Masukkan parameter kualitas air untuk mengetahui apakah air aman digunakan.")
 

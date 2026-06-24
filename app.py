@@ -21,6 +21,7 @@ st.write("Widya Ohibor")
 st.info(
     "Website ini digunakan untuk memprediksi kualitas air berdasarkan parameter lingkungan menggunakan algoritma Random Forest."
 )
+st.metric("Akurasi Model", "95.31%")
 
 st.write("Masukkan parameter kualitas air untuk mengetahui apakah air aman digunakan.")
 

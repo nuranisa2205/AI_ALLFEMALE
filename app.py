@@ -57,9 +57,10 @@ if st.button("Prediksi"):
 
     hasil = model.predict(data)[0]
 
-    st.subheader("Hasil Prediksi")
+st.subheader("Hasil Prediksi")
+st.write("Nilai Prediksi:", hasil)
 
-    if hasil >= 4:
-        st.success("✅ Air Aman Digunakan")
-    else:
-        st.error("⚠️ Air Tidak Aman Digunakan")
+if hasil >= 4:
+    st.success("✅ Air Aman Digunakan")
+else:
+    st.error("⚠️ Air Tidak Aman Digunakan")

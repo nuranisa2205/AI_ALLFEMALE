@@ -68,7 +68,7 @@ if st.button("Prediksi"):
             "CurahHujan"
         ])
 
-               hasil = model.predict(data)[0]
+        hasil = model.predict(data)[0]
 
         st.subheader("Hasil Prediksi")
         st.write("Nilai Prediksi:", hasil)

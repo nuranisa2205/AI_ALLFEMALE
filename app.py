@@ -32,41 +32,55 @@ bod = st.number_input("BOD", value=0.0)
 cod = st.number_input("COD", value=0.0)
 do = st.number_input("DO", value=0.0)
 curah_hujan = st.number_input("Curah Hujan", value=0.0)
+
 if st.button("Prediksi"):
 
-    data = pd.DataFrame([[
-        temperatur,
-        tds,
-        tss,
-        ph,
-        bod,
-        cod,
-        do,
-        curah_hujan
-    ]], columns=[
-        "Temperatur ",
-        "TDS",
-        "TSS",
-        "pH",
-        "BOD",
-        "COD",
-        "DO",
-        "CurahHujan"
-    ])
-
-    hasil = model.predict(data)[0]
-
-    st.subheader("Hasil Prediksi")
-    st.write("Nilai Prediksi:", hasil)
-
-    if hasil == 5:
-        st.success("✅ Sangat Baik")
-
-    elif hasil == 4:
-        st.success("✅ Baik")
-
-    elif hasil == 3:
-        st.warning("⚠️ Cukup Baik")
+    if (
+        temperatur == 0 and
+        tds == 0 and
+        tss == 0 and
+        ph == 0 and
+        bod == 0 and
+        cod == 0 and
+        do == 0 and
+        curah_hujan == 0
+    ):
+        st.warning("⚠️ Silakan isi parameter kualitas air terlebih dahulu.")
 
     else:
-        st.error("❌ Tidak Layak Digunakan")
+        data = pd.DataFrame([[
+            temperatur,
+            tds,
+            tss,
+            ph,
+            bod,
+            cod,
+            do,
+            curah_hujan
+        ]], columns=[
+            "Temperatur ",
+            "TDS",
+            "TSS",
+            "pH",
+            "BOD",
+            "COD",
+            "DO",
+            "CurahHujan"
+        ])
+
+        hasil = model.predict(data)[0]
+
+        st.subheader("Hasil Prediksi")
+        st.write("Nilai Prediksi:", hasil)
+
+        if hasil == 5:
+            st.success("✅ Sangat Baik")
+
+        elif hasil == 4:
+            st.success("✅ Baik")
+
+        elif hasil == 3:
+            st.warning("⚠️ Cukup Baik")
+
+        else:
+            st.error("❌ Tidak Layak Digunakan")
